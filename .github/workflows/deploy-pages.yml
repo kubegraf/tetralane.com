@@ -25,16 +25,30 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Succeeds when Pages is set to the "GitHub Actions" source. If Pages is
+      # off, or set to "Deploy from a branch", this cannot configure it — the
+      # repo's GITHUB_TOKEN is not permitted to create a Pages site — so the
+      # remaining steps are skipped rather than failing the run. In branch
+      # mode GitHub publishes the site itself and this workflow is a no-op.
       - name: Configure Pages
+        id: pages
+        continue-on-error: true
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
+
+      - name: Report Pages source
+        if: steps.pages.outcome != 'success'
+        run: |
+          echo "::notice::Pages is not set to the 'GitHub Actions' source, so this workflow did not deploy."
+          echo "::notice::Enable it under Settings > Pages > Build and deployment > Source: GitHub Actions,"
+          echo "::notice::or leave it on 'Deploy from a branch' (main / root) and GitHub will publish the site."
 
       - name: Upload site artifact
+        if: steps.pages.outcome == 'success'
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
 
       - name: Deploy
         id: deployment
+        if: steps.pages.outcome == 'success'
         uses: actions/deploy-pages@v4
