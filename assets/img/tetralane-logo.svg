@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 104" role="img" aria-label="Tetralane">
+  <title>Tetralane</title>
+  <g>
+    <path fill="#6EB8E0" d="M2 6h24l26 46-26 46H2l26-46z"/>
+    <path fill="#16346B" d="M34 6h24l26 46-26 46H34l26-46z"/>
+    <path fill="#46A45C" d="M68 6h23l26 46H94z"/>
+    <path fill="#F5A623" d="M94 52h23l-26 46H68z"/>
+    <path fill="none" stroke="#1E7C9C" stroke-width="10.5" stroke-linecap="round"
+          d="M7 97c29-8 49-28 63-54 10-19 24-29 44-36"/>
+  </g>
+  <text x="146" y="70" fill="#16346B"
+        font-family="Sora, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="52" letter-spacing="2">
+    <tspan font-weight="700">TETRA</tspan><tspan font-weight="400">LANE</tspan>
+  </text>
+</svg>

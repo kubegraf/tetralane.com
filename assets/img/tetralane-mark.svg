@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 104" role="img" aria-label="Tetralane">
+  <title>Tetralane</title>
+  <!-- lane 1 -->
+  <path fill="#6EB8E0" d="M2 6h24l26 46-26 46H2l26-46z"/>
+  <!-- lane 2 -->
+  <path fill="#16346B" d="M34 6h24l26 46-26 46H34l26-46z"/>
+  <!-- lane 3, split by the horizon -->
+  <path fill="#46A45C" d="M68 6h23l26 46H94z"/>
+  <path fill="#F5A623" d="M94 52h23l-26 46H68z"/>
+  <!-- the lane you take -->
+  <path fill="none" stroke="#1E7C9C" stroke-width="10.5" stroke-linecap="round"
+        d="M7 97c29-8 49-28 63-54 10-19 24-29 44-36"/>
+</svg>
