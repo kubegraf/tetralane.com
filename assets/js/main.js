@@ -77,27 +77,63 @@
     counters.forEach(runCounter);
   }
 
+  /* ---- sticky mobile CTA: on once the hero buttons scroll away,
+         off again over the real CTA so the two never stack ---- */
+  var sticky = document.getElementById('stickycta');
+  var heroActions = document.querySelector('.hero__actions');
+  var demo = document.getElementById('demo');
+  if (sticky && heroActions && demo && 'IntersectionObserver' in window) {
+    var pastHero = false;
+    var atDemo = false;
+    var paint = function () {
+      var on = pastHero && !atDemo;
+      sticky.classList.toggle('is-on', on);
+      sticky.setAttribute('aria-hidden', String(!on));
+      var link = sticky.querySelector('a');
+      if (link) link.tabIndex = on ? 0 : -1;
+    };
+    new IntersectionObserver(function (entries) {
+      pastHero = !entries[0].isIntersecting && entries[0].boundingClientRect.top < 0;
+      paint();
+    }, { threshold: 0 }).observe(heroActions);
+    new IntersectionObserver(function (entries) {
+      atDemo = entries[0].isIntersecting;
+      paint();
+    }, { threshold: 0.12 }).observe(demo);
+  }
+
   /* ---- demo form ---- */
   var form = document.getElementById('cta-form');
   var note = document.getElementById('cta-note');
+  var success = document.getElementById('cta-success');
   var noteDefault = note.textContent;
+  var input = form.querySelector('input');
+  var valid = function (v) { return /^[^@\s]+@[^@\s.]+\.[^@\s]{2,}$/.test(v); };
+
+  input.addEventListener('input', function () {
+    if (!form.classList.contains('is-invalid')) return;
+    if (valid(input.value.trim())) {
+      form.classList.remove('is-invalid');
+      note.classList.remove('is-error');
+      note.textContent = noteDefault;
+    }
+  });
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    var input = form.querySelector('input');
-    var valid = /^[^@\s]+@[^@\s.]+\.[^@\s]{2,}$/.test(input.value.trim());
-    form.classList.toggle('is-invalid', !valid);
-    note.classList.toggle('is-success', valid);
-    if (!valid) {
+    var value = input.value.trim();
+    if (!valid(value)) {
+      form.classList.add('is-invalid');
+      note.classList.add('is-error');
       note.textContent = 'Please enter a valid work email address.';
       input.focus();
       return;
     }
-    note.textContent = 'Thanks — we’ll be in touch within one business day to schedule your demo.';
-    form.reset();
-    window.setTimeout(function () {
-      note.textContent = noteDefault;
-      note.classList.remove('is-success');
-    }, 8000);
+    document.getElementById('cta-email').textContent = value;
+    form.hidden = true;
+    success.hidden = false;
+    success.setAttribute('tabindex', '-1');
+    success.focus({ preventScroll: true });
   });
 
   /* ---- footer year ---- */
