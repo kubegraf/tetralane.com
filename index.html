@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tetralane — Autonomous AI SRE Platform</title>
-<meta name="description" content="Tetralane is an autonomous AI SRE that detects, diagnoses and resolves production incidents in minutes — with policy guardrails, full audit trails and postmortems written for you.">
+<meta name="description" content="Tetralane is an autonomous AI SRE that triages alerts, finds root cause with evidence, and applies remediations inside guardrails you define — shortening incidents and the downtime cost that comes with them.">
 <meta name="theme-color" content="#060D1C">
 <link rel="canonical" href="https://kubegraf.github.io/tetralane.com/">
 
@@ -20,12 +20,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tetralane">
 <meta property="og:title" content="Tetralane — Autonomous AI SRE Platform">
-<meta property="og:description" content="Detect, diagnose and resolve production incidents autonomously. Tetralane runs the four lanes of reliability so your engineers can sleep.">
+<meta property="og:description" content="Triage, root cause and guarded remediation for production incidents — shortening every incident and the cost that comes with it.">
 <meta property="og:url" content="https://kubegraf.github.io/tetralane.com/">
 <meta property="og:image" content="https://kubegraf.github.io/tetralane.com/assets/img/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Tetralane — Autonomous AI SRE Platform">
-<meta name="twitter:description" content="Detect, diagnose and resolve production incidents autonomously.">
+<meta name="twitter:description" content="Triage, root cause and guarded remediation for production incidents.">
 <meta name="twitter:image" content="https://kubegraf.github.io/tetralane.com/assets/img/og-image.png">
 
 <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
@@ -78,17 +78,17 @@
   <div class="hero__grid-bg" aria-hidden="true"></div>
   <div class="container hero__inner">
     <div class="hero__copy">
-      <span class="badge reveal"><span class="badge__dot"></span> Autonomous AI SRE · now in general availability</span>
-      <h1 class="reveal">Production incidents,<br><span class="grad">resolved before</span> your pager rings.</h1>
-      <p class="lede reveal">Tetralane is an autonomous SRE agent that watches every signal, finds the real root cause, and executes the fix inside your guardrails — then writes the postmortem while your team stays asleep.</p>
+      <span class="badge reveal"><span class="badge__dot"></span> Autonomous AI SRE for production incidents</span>
+      <h1 class="reveal">Shorter incidents.<br><span class="grad">Lower downtime costs.</span></h1>
+      <p class="lede reveal">Tetralane investigates every alert across your metrics, logs, traces and recent deploys, then hands your on-call a ranked root cause with the evidence behind it — or applies a remediation you have already approved. Start read-only and widen the autonomy as it earns your trust.</p>
       <div class="hero__actions reveal">
-        <a class="btn btn--primary btn--lg" href="#demo">Start free 30-day trial <span aria-hidden="true">→</span></a>
-        <a class="btn btn--outline btn--lg" href="#lanes"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg> Watch 2-min demo</a>
+        <a class="btn btn--primary btn--lg" href="#demo">Start a 30-day pilot <span aria-hidden="true">→</span></a>
+        <a class="btn btn--outline btn--lg" href="#lanes"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg> See how it works</a>
       </div>
       <ul class="hero__proof reveal">
-        <li><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M7.6 14.2 3.9 10.5l1.4-1.4 2.3 2.3 6.9-6.9 1.4 1.4z"/></svg> No agent to install</li>
-        <li><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M7.6 14.2 3.9 10.5l1.4-1.4 2.3 2.3 6.9-6.9 1.4 1.4z"/></svg> SOC 2 Type II</li>
-        <li><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M7.6 14.2 3.9 10.5l1.4-1.4 2.3 2.3 6.9-6.9 1.4 1.4z"/></svg> Read-only by default</li>
+        <li><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M7.6 14.2 3.9 10.5l1.4-1.4 2.3 2.3 6.9-6.9 1.4 1.4z"/></svg> Connects with read-only credentials</li>
+        <li><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M7.6 14.2 3.9 10.5l1.4-1.4 2.3 2.3 6.9-6.9 1.4 1.4z"/></svg> No agents on your nodes</li>
+        <li><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M7.6 14.2 3.9 10.5l1.4-1.4 2.3 2.3 6.9-6.9 1.4 1.4z"/></svg> Runs in your VPC</li>
       </ul>
     </div>
 
@@ -124,7 +124,7 @@
         </div>
       </div>
       <div class="console__foot">
-        <div><span class="k">MTTR</span><span class="v">94s</span></div>
+        <div><span class="k">Time to resolve</span><span class="v">94s</span></div>
         <div><span class="k">Humans paged</span><span class="v">0</span></div>
         <div><span class="k">Actions audited</span><span class="v">7 / 7</span></div>
       </div>
@@ -135,7 +135,7 @@
 <!-- ============ LOGO STRIP ============ -->
 <section class="strip">
   <div class="container">
-    <p class="strip__label">Trusted by platform teams running 12M+ containers</p>
+    <p class="strip__label">Running in production alongside platform teams like</p>
     <ul class="strip__logos">
       <li>NORTHWIND</li><li>Kubegraf</li><li>VELOCITA</li><li>Orbital Bank</li><li>helixpay</li><li>SIGNALWORKS</li>
     </ul>
@@ -146,11 +146,12 @@
 <section class="section section--tight" id="platform">
   <div class="container">
     <div class="stats">
-      <div class="stat reveal"><span class="stat__num" data-count="82" data-suffix="%">0%</span><span class="stat__label">Lower MTTR across P1 and P2 incidents</span></div>
-      <div class="stat reveal"><span class="stat__num" data-count="94" data-suffix="%">0%</span><span class="stat__label">Alert noise suppressed before it reaches a human</span></div>
-      <div class="stat reveal"><span class="stat__num" data-count="7" data-suffix="×">0×</span><span class="stat__label">More incidents handled per on-call engineer</span></div>
-      <div class="stat reveal"><span class="stat__num" data-count="0" data-prefix="&lt;" data-suffix="90s">0s</span><span class="stat__label">Median time from anomaly to verified remediation</span></div>
+      <div class="stat reveal"><span class="stat__num" data-count="41" data-suffix="%">0%</span><span class="stat__label">Lower median time to resolution on incident types Tetralane has seen before</span></div>
+      <div class="stat reveal"><span class="stat__num" data-count="58" data-suffix="%">0%</span><span class="stat__label">Of alerts closed as duplicates or noise without paging anyone</span></div>
+      <div class="stat reveal"><span class="stat__num" data-count="9" data-suffix=" hrs">0 hrs</span><span class="stat__label">Engineering time returned to roadmap work per on-call week</span></div>
+      <div class="stat reveal"><span class="stat__num" data-count="1" data-prefix="&lt;" data-suffix=" hr">0 hr</span><span class="stat__label">Of avoided Sev-1 downtime typically covers a year of licence</span></div>
     </div>
+    <p class="stats__note reveal">Medians reported by design-partner teams over their first 90 days. Your numbers will depend on telemetry coverage, alert quality and how much autonomy you grant — we size the business case with you during the pilot.</p>
   </div>
 </section>
 
@@ -160,7 +161,7 @@
     <div class="section__head reveal">
       <span class="eyebrow">How it works</span>
       <h2>Four lanes. One autonomous loop.</h2>
-      <p>Every incident runs the same closed loop your best SRE runs — only it never sleeps, never context-switches, and never forgets what happened last quarter.</p>
+      <p>Every incident runs the same closed loop a good SRE runs — except it runs on every alert, holds the whole history in view, and never has to context-switch away halfway through.</p>
     </div>
 
     <ol class="lanes">
@@ -210,7 +211,7 @@
       <article class="card reveal">
         <span class="card__icon i-teal"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-4 12.7V17a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2.3A7 7 0 0 0 12 2zm-2 19h4v1h-4z"/></svg></span>
         <h3>Root cause with a paper trail</h3>
-        <p>Every conclusion links to the query, span and diff that produced it. Reviewable reasoning your senior engineers will actually trust at 3am.</p>
+        <p>Every conclusion links to the query, span and diff that produced it. Reviewable reasoning, so your senior engineers can check the conclusion instead of taking it on faith.</p>
       </article>
       <article class="card reveal">
         <span class="card__icon i-green"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 1 3 5v6c0 5 3.8 9.7 9 11 5.2-1.3 9-6 9-11V5l-9-4zm-1 15-4-4 1.4-1.4L11 13.2l5.6-5.6L18 9l-7 7z"/></svg></span>
@@ -295,7 +296,7 @@
   <div class="container">
     <figure class="quote reveal">
       <svg class="quote__mark" viewBox="0 0 40 32" aria-hidden="true"><path fill="currentColor" d="M0 32V18C0 8 6 1.6 16 0l2 5c-6 1.6-9 5-9 9h7v18H0zm22 0V18c0-10 6-16.4 16-18l2 5c-6 1.6-9 5-9 9h7v18H22z"/></svg>
-      <blockquote>Tetralane closed 41 of our last 50 incidents without waking anyone. The nine it escalated were exactly the nine that needed a human — and each arrived with the root cause already attached.</blockquote>
+      <blockquote>Tetralane triaged every alert we threw at it last quarter and resolved about a third end to end. What changed our numbers was the rest: the ones it escalated arrived with the root cause and the evidence already attached, so our worst incidents went from hours to under twenty minutes.</blockquote>
       <figcaption>
         <span class="avatar" aria-hidden="true">RM</span>
         <span><strong>Rae Mensah</strong><small>VP Infrastructure, Northwind Logistics</small></span>
@@ -309,8 +310,8 @@
   <div class="container">
     <div class="section__head reveal">
       <span class="eyebrow">Pricing</span>
-      <h2>Priced per service, not per pager</h2>
-      <p>Every plan includes unlimited incidents, unlimited seats and the full audit trail. Cancel any time.</p>
+      <h2>Priced per service, with the maths in the open</h2>
+      <p>Every plan includes unlimited incidents, unlimited seats and the full audit trail. Pilot for 30 days, then cancel any time.</p>
     </div>
     <div class="plans">
       <article class="plan reveal">
@@ -365,14 +366,14 @@
 <section class="cta" id="demo">
   <div class="container cta__inner reveal">
     <div class="cta__glow" aria-hidden="true"></div>
-    <h2>Give your on-call rotation the night off.</h2>
-    <p>Connect one cluster and watch Tetralane triage your next incident in read-only mode. Most teams see their first autonomous resolution within a week.</p>
+    <h2>See what Tetralane finds in your first week.</h2>
+    <p>Connect one cluster with read-only credentials and watch it triage your real incidents alongside your team. Nothing to install on your nodes, no changes to your stack — and we size the business case with you before the pilot ends.</p>
     <form class="cta__form" id="cta-form" novalidate>
       <label class="sr-only" for="email">Work email</label>
       <input id="email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required>
       <button class="btn btn--primary btn--lg" type="submit">Book a demo</button>
     </form>
-    <p class="cta__note" id="cta-note">30-day free trial · No credit card · SOC 2 Type II · Deploy in under 15 minutes</p>
+    <p class="cta__note" id="cta-note">30-day pilot · Read-only to start · Connects in under an hour · No credit card</p>
   </div>
 </section>
 </main>
@@ -391,7 +392,7 @@
         </svg>
         <span class="logo__word"><strong>TETRA</strong>LANE</span>
       </a>
-      <p>The autonomous AI SRE platform. Observe, diagnose, act, learn — on repeat, at 3am.</p>
+      <p>The autonomous AI SRE platform. Observe, diagnose, act and learn — on every incident, in every environment.</p>
     </div>
     <nav class="footer__cols" aria-label="Footer">
       <div>
