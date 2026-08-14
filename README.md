@@ -32,8 +32,14 @@ Edit and refresh — there is nothing to compile.
 
 ## Deployment
 
-Pushes to `main` are published to GitHub Pages by
-[`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml).
+GitHub Pages serves this repo directly: **Settings → Pages → Source: Deploy from
+a branch → `main` → `/ (root)`**. The site lives at the repo root and ships a
+`.nojekyll` file, so pushing to `main` publishes it as-is with no build step.
+
+[`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) is
+kept for the alternative setup — switching Source to "GitHub Actions" makes that
+workflow deploy instead. While Source is set to a branch, the workflow detects
+it and skips, so it is a no-op rather than a failing check.
 
 ## Brand
 
