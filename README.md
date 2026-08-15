@@ -14,7 +14,7 @@ index.html                 # the whole page
 assets/css/styles.css      # design tokens + all styling
 assets/js/main.js          # sticky nav, mobile menu, scroll reveal, counters, form
 assets/fonts/              # self-hosted Inter / Sora / JetBrains Mono (woff2, latin subset)
-assets/img/                # logo lockup, mark, social preview image
+assets/img/                # the logo lockup (single source) + social preview
 assets/favicon.svg         # browser tab icon (+ png/ico variants alongside)
 .github/workflows/         # GitHub Pages deployment
 ```
@@ -40,6 +40,14 @@ a branch → `main` → `/ (root)`**. The site lives at the repo root and ships 
 kept for the alternative setup — switching Source to "GitHub Actions" makes that
 workflow deploy instead. While Source is set to a branch, the workflow detects
 it and skips, so it is a no-op rather than a failing check.
+
+## Logo
+
+`assets/img/tetralane-logo.svg` is the single source for every appearance of
+the logo — header, footer, favicon, app icons and the social preview all render
+that one file. It is the complete lockup: never cropped to the mark, never
+recoloured. The artwork is navy, so wherever it appears it sits on its own
+white field.
 
 ## Brand
 
