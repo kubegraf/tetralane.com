@@ -14,8 +14,9 @@ index.html                 # the whole page
 assets/css/styles.css      # design tokens + all styling
 assets/js/main.js          # sticky nav, mobile menu, scroll reveal, counters, form
 assets/fonts/              # self-hosted Inter / Sora / JetBrains Mono (woff2, latin subset)
-assets/img/                # the logo lockup (single source) + social preview
-assets/favicon.svg         # browser tab icon (+ png/ico variants alongside)
+assets/img/IMG_1620.png    # the supplied logo file — single source for every logo
+assets/img/og-image.png    # social preview
+assets/favicon-*.png       # tab and app icons, resized from the logo file
 .github/workflows/         # GitHub Pages deployment
 ```
 
@@ -43,11 +44,20 @@ it and skips, so it is a no-op rather than a failing check.
 
 ## Logo
 
-`assets/img/tetralane-logo.svg` is the single source for every appearance of
-the logo — header, footer, favicon, app icons and the social preview all render
-that one file. It is the complete lockup: never cropped to the mark, never
-recoloured. The artwork is navy, so wherever it appears it sits on its own
-white field.
+`assets/img/IMG_1620.png` is the supplied logo file and the single source for
+every appearance of the logo. It is used as delivered — never redrawn,
+recoloured or re-exported.
+
+The file is 1408x768 and its artwork occupies x 182-1224, y 302-466, so roughly
+four fifths of it is blank canvas. The header and footer load the file itself
+and frame that region in CSS (see `.logo` in `styles.css`) rather than cropping
+a new copy, which is why the offsets there are expressed as fractions of 216.
+
+The tab and app icons are resizes of the same region, letterboxed into a square
+so nothing is cropped. That leaves the wordmark small: readable at 180px and
+above, a smudge at 32px, effectively blank at 16px. Cropping the icons to the
+mark alone would give a sharp favicon at the cost of showing only part of the
+logo.
 
 ## Brand
 
