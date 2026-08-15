@@ -82,10 +82,10 @@ section[id],[id]{scroll-margin-top:92px}
 .nav{position:sticky;top:0;z-index:100;transition:background .3s ease,border-color .3s ease,backdrop-filter .3s ease;border-bottom:1px solid transparent}
 .nav.is-stuck{background:rgba(6,13,28,.82);backdrop-filter:blur(14px);border-bottom-color:var(--line)}
 .nav__inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:72px}
-.logo{display:inline-flex;align-items:center;gap:11px}
-.logo__mark{width:42px;height:auto;flex:none}
-.logo__word{font-family:var(--display);font-weight:600;font-size:19px;letter-spacing:.06em;color:var(--text)}
-.logo__word strong{font-weight:700}
+/* The logo is used as supplied — full lockup, uncropped, unrecoloured.
+   It is navy artwork, so it always sits on its own white field. */
+.logo{display:inline-flex;align-items:center;background:#fff;border-radius:10px;padding:8px 14px}
+.logo__img{display:block;width:auto;height:26px}
 .nav__links{display:flex;align-items:center;gap:30px;font-size:15px;font-weight:500}
 .nav__links>a{display:inline-flex;align-items:center;min-height:44px;color:var(--muted);transition:color .18s ease}
 .nav__links>a:hover{color:var(--text)}
