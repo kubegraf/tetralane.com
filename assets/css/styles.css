@@ -83,7 +83,7 @@ section[id],[id]{scroll-margin-top:92px}
 .nav.is-stuck{background:rgba(6,13,28,.82);backdrop-filter:blur(14px);border-bottom-color:var(--line)}
 .nav__inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:72px}
 .logo{display:inline-flex;align-items:center;gap:11px}
-.logo__mark{width:38px;height:31px;flex:none}
+.logo__mark{width:42px;height:auto;flex:none}
 .logo__word{font-family:var(--display);font-weight:600;font-size:19px;letter-spacing:.06em;color:var(--text)}
 .logo__word strong{font-weight:700}
 .nav__links{display:flex;align-items:center;gap:30px;font-size:15px;font-weight:500}
